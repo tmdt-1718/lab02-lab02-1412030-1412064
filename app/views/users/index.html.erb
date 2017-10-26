@@ -1,1 +1,51 @@
-<h2>Hello</h2>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #770a8b;">
+<a class="navbar-brand" href="">Webmail</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	<ul class="navbar-nav mr-auto">
+  		<li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Abouts</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Contacts</a>
+      </li>
+  	</ul>
+</div>
+    <div class="btn btn-outline-info" >
+    	<%= link_to "Log In", login_path %>
+    </div>
+</nav>
+
+<main>
+	<section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="display-3">Welcome!</h1>
+          <p class="lead text-muted">Your welcome! This is a webmail. Sign up now to experience.</p>
+          <p>
+            <div class="btn btn-outline-success btn-lg">
+    		<%= link_to "Sign up now", signup_path %>
+    		</div>
+          </p>
+        </div>
+      </section>
+</main>
+
+<footer>
+	<div class="container">
+		<hr>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="">About Us</p>
+			</div>
+			<div class="col-md-4">
+				<a href="">Contact Us</p>
+			</div>
+			<div class="col-md-4">
+				<a href="">Product Us</p>
+			</div>
+		</div>
+		<hr>
+	</div>
+</footer>

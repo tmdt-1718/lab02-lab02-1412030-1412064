@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	def index
-		
+		@user=User.all
 	end
 
 	def new
@@ -8,18 +8,21 @@ class UsersController < ApplicationController
 	end
 
 	def create
-    	@user = User.new user_params
-    	if @user.save
-      		flash[:success] = "Register success"
-      		redirect_to users_path
-    	else
-      		flash[:success] = "Register failed"
-      		render :new
-    	end
-  	end
+    @user = User.new(user_params)
+    if @user.save
+      log_in @user
+      redirect_to login_path
+    else
+      render "new"
+    end
+  end
 
-  	private
-  	def user_params
-    	params.require(:user).permit :name, :username, :password, :password_confirmation
-  	end
+  def show
+    current_user
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
 end

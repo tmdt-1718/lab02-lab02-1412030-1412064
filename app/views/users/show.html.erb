@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #770a8b;">
+  <a class="navbar-brand" href="">Webmail</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Abouts</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+          </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <label class="dropdown-item" type="label">
+                <span class="text-success">
+                  User: <%= current_user.name %>
+                </span>
+              </label>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Change Password</a>
+              <span class="dropdown-item">
+              <%= link_to "Logout", logout_path %>
+              </span>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-info">Search</button>
+    </form>
+</nav>
+<main>
+  <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-2 float-left col-1 pl-0 pr-0" id="sidebar">
+        <div class="list-group text-center text-md-left">
+           <a class="list-group-item d-inline-block collapsed d-none d-md-inline" href="#">Inbox</a>
+           <a class="list-group-item d-inline-block collapsed d-none d-md-inline" href="#">Send box</a>
+           <a class="list-group-item d-inline-block collapsed d-none d-md-inline" href="#">Trash</a>
+           <a class="list-group-item d-inline-block collapsed d-none d-md-inline" href="#">Contacts</a>
+           <a class="list-group-item d-inline-block collapsed d-none d-md-inline" href="#">Links</a>
+        </div>
+        
+    </div>
+    <main class="col-md-9 float-left col px-5 pl-md-2 pt-2 main">
+      <div class="card">
+  <div class="card-header text-center">
+    Inbox
+  </div>
+  <div class="card-body">
+     <div class="list-group">
+      <span class="card-footer text-muted">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in 1</a>
+    1 days ago
+  </span>
+   <span class="card-footer text-muted">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in 2</a>
+    2 days ago
+  </span>
+   <span class="card-footer text-muted">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in 3</a>
+    3 days ago
+  </span>
+   <span class="card-footer text-muted">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in 4</a>
+    4 days ago
+  </span>
+   <span class="card-footer text-muted">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in 5</a>
+    5 days ago 
+  </span>
+</div>
+</div>
+</div>
+    </main>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <a href="">About Us</p>
+      </div>
+      <div class="col-md-4">
+        <a href="">Contact Us</p>
+      </div>
+      <div class="col-md-4">
+        <a href="">Product Us</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+</footer>

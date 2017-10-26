@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  get     "/login", to: "session#new"
-  post    "/login", to: "session#create"
-  delete  "/logout", to: "session#destroy"
+  root to: "users#index"
+  
+  get "/login", to: "session#new"
+  post "/login", to: "session#create"
 
-  resources :users
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+
+  get "/logout", to: "session#destroy"
+  get "/show", to: "users#show"
+
 end
